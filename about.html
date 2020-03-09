@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Greentricks</title>
+	<meta name="description" content="This is greentricks "> <!-- work on it -->
+	<link rel="stylesheet" type="text/css" href="css/greentricks.css">
+	<link rel="stylesheet" href="css/wikistyle.css">
+	<script type="text/javascript" src="js/change_language.js"></script>
+</head>
+<body >
+	<header class="header">
+		<nav class="nav">
+			<div class="left-list">
+				<img class="pic" src="img/logo.png">
+				<span class="title">Greentricks</span>
+			</div>
+					<ul class="right-list">  <!-- now the list elements are divs but later they should be a (the also chnage style)-->
+						<li><div id="en" style="display: none;"><a href="index.html?lang=en">Home</a></div><div id="de"><a href="index.html?lang=de">Home</a></div></li>
+						<li><div id="en" style="display: none;"><a href="tricks.html?lang=en">Tricks</a></div><div id="de"><a href="tricks.html?lang=de">Tricks</a></div></li>
+						<li><div class="current" id="en" style="display: none;">About us</div><div class="current" id="de">&Uuml;ber uns</div></li>
+						<li><div id="en" style="display: none;"><a href="werbung.html?lang=en">Advertisement</a></div><div id="de"><a href="werbung.html?lang=de">Werbung</a></div></li>
+						<li><div><img onclick="showEn()" class="flagge" src="img/englisch.png"></div></li>
+						<li><div><img onclick="showGer()" class="flagge" src="img/deutsch.png"></div></li>
+					</ul>
+		</nav>
+	</header>
+	<section class="middle">
+		<div class="article">
+			<h1 id="en" style="display: none;">About us</h1>
+			<h1 id="de">Über uns</h1>
+			<p id="en" style="display: none;" class="siteSub">TODO... write something smart about us :-)</p>
+			<p id="de" class="siteSub">TODO... schreibe irgendwas kluges über uns :-)</p>
+		</div>
+	</section>
+	<footer class="footer">
+		<div id="en" style="display: none;">Contact us: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div><div id="de">Kontakt: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div> <!-- was auch immer halt in den footer gehÃ¶rt-->
+	</footer>
+
+</body>
+</html>

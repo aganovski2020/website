@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Greentricks</title>
+	<meta name="description" content="This is greentricks "> <!-- work on it -->
+	<link rel="stylesheet" type="text/css" href="../../css/greentricks.css">
+	<link rel="stylesheet" href="../../css/wikistyle.css">
+	<script type="text/javascript" src="../../js/change_language.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="../../js/script.js"></script>
+</head>
+<body onload="showRandomTipp(2)">
+	<header class="header">
+		<nav class="nav">
+			<div class="left-list">
+				<img class="pic" src="../../img/logo.png">
+				<span class="title">Greentricks</span>
+			</div>
+			<ul class="right-list">  <!-- now the list elements are divs but later they should be a (the also chnage style)-->
+				<li><div id="en" style="display: none;"><a href="../../index.html?lang=en">Home</a></div><div id="de"><a href="../../index.html?lang=de">Home</a></div></li>
+				<li><div class="current" id="en" style="display: none;"><a href="../../tricks.html?lang=en">Tricks</a></div><div class="current" id="de"><a href="../../tricks.html?lang=de">Tricks</a></div></li>
+				<li><div id="en" style="display: none;"><a href="../../about.html?lang=en">About us</a></div><div id="de"><a href="../../about.html?lang=de">&Uuml;ber uns</a></div></li>
+				<li><div id="en" style="display: none;"><a href="../../werbung.html?lang=en">Advertisement</a></div><div id="de"><a href="../../werbung.html?lang=de">Werbung</a></div></li>
+				<li><div><img onclick="showEn()" class="flagge" src="../../img/englisch.png"></div></li>
+				<li><div><img onclick="showGer()" class="flagge" src="../../img/deutsch.png"></div></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="middle">
+		<div class="sidebar">
+			<div class="navigation">
+				<h3 id="en" style="display: none;"><a href="../../tricks.html?lang=en">Tricks</a></h3><h3 id="de"><a href="../../tricks.html?lang=de">Tricks</a></h3>
+				<ul>
+					<li id="en" style="display: none;">&#9679; <a href="..\house.html?lang=en">Hause and Living</a></li><li id="de">&#9679; <a href="..\house.html?lang=de">Haus und Wohnen</a></li>
+					<li id="en" style="display: none;"><strong>&nbsp;&nbsp; &#9675; Solar Power</strong></li><li id="de"><strong>&nbsp;&nbsp; &#9675; Solarenergie</strong></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainsection">
+			<div class="article">
+				<h1 id="en" style="display: none;">Solar Power</h1><h1 id="de">Solarenergie</h1>
+				<p id="en" style="display: none;" class="siteSub">Solar power doesn’t produce any carbon emissions, it’s clean and renewable, and allows you not only to reduce your carbon footprint but will even help you to reduce your electricity costs.</p>
+				<p id="de" class="siteSub">Solarenergie verursacht keine CO2-Emissionen, ist sauber und erneuerbar. Das nutzen von Solarenergie hilft Ihnen nicht nur Ihren CO2-Fußabdruck zu verringern aber auch Ihre Stromkosten zu senken.</p>
+
+				<section id="rd1" style="float:left; margin:10px; display: none;">
+					<div class="aktuell">
+						<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+						<p class="trick_small" id="en" style="display: none;">Did you know that by using the solar energy you can save money?</p><p id="de" class="trick_small">Hast du gewusst dass durch die Nutzung von Solarenergie Geld sparen kannst?</p>
+						<img src="../../img/money-bag.png">
+					</div>
+				</section>
+				<section id="rd2" style="float:left; margin:10px; display: none;">
+					<div class="aktuell">
+						<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+						<p class="trick" id="en" style="display: none;">Did you know that solar power can be stored for later use?</p><p id="de" class="trick">Hast du gewusst dass Solarenergie gespeichert werden kann?</p>
+						<img style="width:300px;height:150px;" src="../../img/battery-storage.png">
+					</div>
+				</section>
+
+				<div class="contentsPanel" style="float:left; margin:10px">
+					<div id="en" style="display: none;" class="contentsHeader">Content</div>
+					<div id="de" class="contentsHeader">Inhalt</div>
+					<ul>
+						<li id="en" style="display: none;"><a href="solarpanels.html?lang=en">&#8226; Solar Panels</a></li><li id="de"><a href="solarpanels.html?lang=de">&#8226; Photovoltaik</a></li>
+						<li id="en" style="display: none;"><a href="#">&#8226; Solar storage batteries</a></li><li id="de"><a href="#">&#8226; Solarbatterien</a></li>
+						<li id="en" style="display: none;"><a href="#">&#8226; Solar appliances</a></li><li id="de"><a href="#">&#8226; Solargeräte</a></li>
+					</ul>
+				</div>
+				<br clear="all" />
+
+				<h2 id="en" style="display: none;">Solar Power Virtually free?</h2><h2 id="de">Solarenergie praktisch kostenlos?</h2>
+				<p id="en" style="display: none;">Many solar power suppliers try to sell solar energy as free, the truth, however, is that there are initial setup and transfer costs. Previously, the cost of adapting your home to make use of solar power was almost prohibitive, despite the obvious advantages. These days, with advances in technology and increased awareness for the need of renewable energy, the cost of solar power equipment has been driven down, making it more affordable for everyone. Solar power systems are durable and low maintenance: once you’re equipped you’re set to enjoy years of trouble free energy.</p>
+				<p id="de">Viele Solarstromgeräte Anbieter versuchen die Solarenergie als quasi kostenlos darzustellen. Die Wahrheit ist jedoch, dass anfängliche Einrichtungs- und Übertragungskosten anfallen. Bisher waren die Kosten für die Anpassung Ihres Hauses an die Nutzung von Solarenergie trotz der offensichtlichen Forderungen sehr hoch. In den letzten Jahren sind die Kosten für Solarstromanlagen aufgrund der technologischen Fortschritte erheblich gesunken. Solarstromanlagen sind zuverlässig und wartungsarm.</p>
+				<h3>Tricks</h3>
+				<dl>
+					<dt id="en" style="display: none;">&#8226; Save money in the long run <img width="30" height="30" src="../../img/money-bag.png"></dt>
+					<dt id="de">&#8226; Sparen Sie auf lange Sicht Geld <img width="30" height="30" src="../../img/money-bag.png"></dt>
+					<dd id="en" style="display: none;">After initial setup costs have been taken care of, solar energy is indeed free.</dd>
+					<dd id="de">Nach den anfänglichen Einrichtungskosten ist die Solarenergie tatsächlich kostenlos.</dd>
+
+					<dt id="en" style="display: none;">&#8226; Solar power can be stored for later use <img width="40" height="30" src="../../img/battery-storage.png"></dt>
+					<dt id="de">&#8226; Solarenergie kann gespeichert werden <img width="40" height="30" src="../../img/battery-storage.png"></dt>
+					<dd id="en" style="display: none;">Solar power is obviously not always available – the sun sets, it rains. But solar power can be stored for later use.</dd>
+					<dd id="de">Sonnenenergie ist natürlich nicht immer verfügbar - die Sonne geht unter, es regnet. Solarenergie kann jedoch für eine spätere Verwendung gespeichert werden.</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div id="en" style="display: none;">Contact us: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div><div id="de">Kontakt: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div> <!-- was auch immer halt in den footer gehÃ¶rt-->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Greentricks</title>
+	<meta name="description" content="This is greentricks "> <!-- work on it -->
+	<link rel="stylesheet" type="text/css" href="css/greentricks.css">
+	<link rel="stylesheet" href="css/wikistyle.css">
+	<script type="text/javascript" src="js/change_language.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/script.js"></script>
+</head>
+<body >
+	<header class="header">
+		<nav class="nav">
+			<div class="left-list">
+				<img class="pic" src="img/logo.png">
+				<span class="title">Greentricks</span>
+			</div>
+			<ul class="right-list">  <!-- now the list elements are divs but later they should be a (the also chnage style)-->
+				<li><div id="en" style="display: none;"><a href="index.html?lang=en">Home</a></div><div id="de"><a href="index.html?lang=de">Home</a></div></li>
+				<li><div class="current" id="en" style="display: none;"><a href="tricks.html?lang=en">Tricks</a></div><div class="current" id="de"><a href="tricks.html?lang=de">Tricks</a></div></li>
+				<li><div id="en" style="display: none;"><a href="about.html?lang=en">About us</a></div><div id="de"><a href="about.html?lang=de">&Uuml;ber uns</a></div></li>
+				<li><div id="en" style="display: none;"><a href="werbung.html?lang=en">Advertisement</a></div><div id="de"><a href="werbung.html?lang=de">Werbung</a></div></li>
+				<li><div><img onclick="showEn()" class="flagge" src="img/englisch.png"></div></li>
+				<li><div><img onclick="showGer()" class="flagge" src="img/deutsch.png"></div></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="middle">
+		<div class="sidebar">
+			<div class="navigation">
+				<h3 id="en" style="display: none;">Content</h3>
+				<h3 id="de">Inhalt</h3>
+				<ul>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\politik.html?lang=en">Politics</a></li><li id="de">&#8226; <a href="tricks\politik.html?lang=de">Politik</a></li>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\house.html?lang=en">Hause and Living</a></li><li id="de">&#8226; <a href="tricks\house.html?lang=de">Haus und Wohnen</a></li>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\health.html?lang=en">Health</a></li><li id="de">&#8226; <a href="tricks\health.html?lang=de">Health</a></li>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\travel.html?lang=en">Travel</a></li><li id="de">&#8226; <a href="tricks\travel.html?lang=de">Reisen</a></li>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\lifestyle.html?lang=en">Lifestyle</a></li><li id="de">&#8226; <a href="tricks\lifestyle.html?lang=de">Lifestyle</a></li>
+					<li id="en" style="display: none;">&#8226; <a href="tricks\production.html?lang=en">Manufacturing</a></li><li id="de">&#8226; <a href="tricks\production.html?lang=de">Produktion</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainsection">
+			<div class="article">
+				<h2 id="en" style="display: none;">The Tricks</h2>
+				<h2 id="de">Die Tricks</h2>
+
+				<p id="en" style="display: none;" class="siteSub">This collection of tricks is about helping us to minimize our own impact on the planet but still enjoy modern technolgy.</p>
+				<p id="de" class="siteSub">Diese Sammlung von Tricks soll uns dabei helfen, unsere eigenen Auswirkungen auf unseren Planeten zu minimieren und gleichzeitig die moderne Technologie weiter zu genießen.</p>
+
+				<p id="en" style="display: none;"><strong>Greentricks.de</strong>, collects tricks from all interested and motivated contributors and makes them available to all of us.
+				We are planning to completely integrate the Wikipedia-like CMS platform into out website to facilitate this process.
+				We are working on it... For the time beeng you can send your tips to us per email and we will enter them manually.
+				Enjoy reading :-)</p>
+
+				<p id="de"><strong>Greentricks.de</strong> sammelt Tricks von allen interessierten und motivierten Leuten und stellt sie uns allen zur Verfügung.
+				Wir planen, eine Wikipedia-ähnliche CMS-Plattform in unsere Website zu integrieren, um diesen Prozess zu vereinfachen.
+				Wir arbeiten daran ... Zur Zeit kannst du uns deine Tipps per E-Mail zusenden und wir werden sie manuell eintragen.
+				Viel Spaß beim Lesen:-)</p>
+
+				<p>
+					<div class="contentsPanel" style="float:left; margin:10px">
+						<div id="en" style="display: none;" class="contentsHeader"><a href="tricks\politik.html?lang=en">Politics</a></div>
+						<div id="de" class="contentsHeader"><a href="tricks\politik.html?lang=de">Politik</a></div>
+						<ul>
+							<li id="en" style="display: none;"><a href="tricks\politik.html?lang=en&#fff">&#8226; Fridays for Future</a></li><li id="de"><a href="tricks\politik.html?lang=de&#fff">&#8226; Fridays for Future</a></li>
+							<li id="en" style="display: none;"><a href="tricks\politik.html?lang=en&#petitions">&#8226; Petitions</a></li><li id="de"><a href="tricks\politik.html?lang=de&#petitions">&#8226; Petitionen</a></li>
+						</ul>
+					</div>
+					<div class="contentsPanel" style="float:left; margin:10px">
+						<div id="en" style="display: none;" class="contentsHeader"><a href="tricks\house.html?lang=en">Hause and Living</a></div>
+						<div id="de" class="contentsHeader"><a href="tricks\house.html?lang=de">Haus und Wohnen</a></div>
+						<ul>
+							<li id="en" style="display: none;"><a href="tricks\house\solarpower.html?lang=en">&#8226; Solar Power</a></li><li id="de"><a href="tricks\house\solarpower.html?lang=de">&#8226; Solarenergie</a></li>
+							<li id="en" style="display: none;"><a href="tricks/house/greenhome.html?lang=en">&#8226; Green Home</a></li><li id="de"><a href="tricks/house/greenhome.html?lang=de">&#8226; Grünes Zuhause</a></li>
+							<li id="en" style="display: none;"><a href="#">&#8226; ...</a></li><li id="de"><a href="#">&#8226; ...</a></li>
+						</ul>
+					</div>
+				</p>
+				<br clear="all" />
+			</div>
+
+		</div>
+	</section>
+	<footer class="footer">
+		<div id="en" style="display: none;">Contact us: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div><div id="de">Kontakt: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div> <!-- was auch immer halt in den footer gehÃ¶rt-->
+	</footer>
+
+</body>
+</html>

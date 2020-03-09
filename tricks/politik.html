@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Greentricks</title>
+	<meta name="description" content="This is greentricks "> <!-- work on it -->
+	<link rel="stylesheet" type="text/css" href="../css/greentricks.css">
+	<link rel="stylesheet" href="../css/wikistyle.css">
+	<script type="text/javascript" src="../js/change_language.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="../js/script.js"></script>
+</head>
+<body onload="showRandomTipp(2)">
+	<header class="header">
+		<nav class="nav">
+			<div class="left-list">
+				<img class="pic" src="../img/logo.png">
+				<span class="title">Greentricks</span>
+			</div>
+			<ul class="right-list">  <!-- now the list elements are divs but later they should be a (the also chnage style)-->
+				<li><div id="en" style="display: none;"><a href="../index.html?lang=en">Home</a></div><div id="de"><a href="../index.html?lang=de">Home</a></div></li>
+				<li><div class="current" id="en" style="display: none;"><a href="../tricks.html?lang=en">Tricks</a></div><div class="current" id="de"><a href="../tricks.html?lang=de">Tricks</a></div></li>
+				<li><div id="en" style="display: none;"><a href="../about.html?lang=en">About us</a></div><div id="de"><a href="../about.html?lang=de">&Uuml;ber uns</a></div></li>
+				<li><div id="en" style="display: none;"><a href="../werbung.html?lang=en">Advertisement</a></div><div id="de"><a href="../werbung.html?lang=de">Werbung</a></div></li>
+				<li><div><img onclick="showEn()" class="flagge" src="../img/englisch.png"></div></li>
+				<li><div><img onclick="showGer()" class="flagge" src="../img/deutsch.png"></div></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="middle">
+		<div class="sidebar">
+			<div class="navigation">
+				<h3 id="en" style="display: none;"><a href="../tricks.html?lang=en">Tricks</a></h3><h3 id="de"><a href="../tricks.html?lang=de">Tricks</a></h3>
+				<ul>
+					<li id="en" style="display: none;"><strong>&#9679; Politics</strong></li><li id="de"><strong>&#9679; Politik</strong></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainsection">
+			<div class="article">
+				<h1 id="en" style="display: none;">Politics</h1>
+				<h1 id="de">Politik</h1>
+				<p id="en" style="display: none;" class="siteSub">The political tricks help you to politically engage yourself for an ecologically sustainable society rooted in environmentalism, nonviolence, social justice and grassroots democracy.</p>
+				<p id="de" class="siteSub">Politische Tricks helfen dir politisch zu engagieren für eine ökologisch nachhaltige Gesellschaft, die auf Gewaltlosigkeit, sozialer Gerechtigkeit und konsequenter Demokratie beruht.</p>
+
+				<div class="contentsPanel" style="float:left; margin:10px">
+					<div id="en" style="display: none;" class="contentsHeader">Content</div>
+					<div id="de" class="contentsHeader">Inhalt</div>
+					<ul>
+						<li><a href="#fff">Fridays for Future</a></li>
+						<li id="en" style="display: none;"><a href="#petitions">Petitions</a></li><li id="de"><a href="#petitions">Petitionen</a></li>
+					</ul>
+				</div>
+
+				<a name="fff"></a>
+				<section id="rd1" style="float:left; margin:10px; display: none;">
+					<div class="aktuell">
+						<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+						<p class="trick_small" id="en" style="display: none;"><a href="#fff">Go to a Fridays for future Demonstration</a></p><p id="de" class="trick_small"><a href="#fff">Gehe freitags zur eine Fridays-for-Future Demo in deiner Nahe</a></p>
+						<img src="../img/fff.jpg">
+					</div>
+				</section>
+				<section id="rd2" style="float:left; margin:10px; display: none;">
+					<div class="aktuell">
+						<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+						<p class="trick_small" id="en" style="display: none;"><a href="#petitions">Sign a cimate saving petition</a></p><p id="de" class="trick_small"><a href="#petitions">Unterschreiben Sie eine Petition zum Klimaschutz</a></p>
+						<img src="../img/petition.jpg">
+					</div>
+				</section>
+				<br clear="all" />
+
+				<h2>Fridays for Future<a name="fff"></a></h2>
+				<div class="articleRight">
+					<div class="articleRightInner">
+						<img src="../img/fff.jpg" alt="Fridays for Future" height="100" width="140">
+					</div>
+					<a id="en" style="display: none;" href="https://fridaysforfuture.org/">https://fridaysforfuture.org/</a>
+					<a id="de" href="https://fridaysforfuture.de/">https://fridaysforfuture.de/</a>
+				</div>
+				<p id="en" style="display: none;">Go to a Fridays for future Demonstration. Go for it! It is not that bad and can be actually fun. You will get some exercise done by walking through the town. If you are lucky you will meet your friends there and other cool people and you will listen to some smart people holding a speach ...</p>
+				<p id="de">Gehe freitags zur eine Fridays-for-Future Demo in deiner Nahe. Go for it ??! Es ist nicht so schlimm und kann tatsächlich Spaß machen. Wenn du durch die Stadt spazierst, wirst du dich wenigstens gut bewegen. Wenn du Glück hast, triffst du deine Freunde und andere coole Leute und hörst einigen klugen Leuten zu, die eine Rede halten ...</p>
+				<p id="en" style="display: none;">To find out when the next Demonstration ist visit: <a href="https://fridaysforfuture.org/">https://fridaysforfuture.org/</a>.</p>
+				<p id="de">Um herauszufinden, wann und wo die nächste Demo stattfindet besuche mal: <a href="https://fridaysforfuture.de/">https://fridaysforfuture.de/</a>.</p>
+				<h3>Tricks</h3>
+				<dl>
+					<dt id="en" style="display: none;">&#8226; Do not take your bike or skateboard</dt>
+					<dt id="de">&#8226; Nimm dein Fahrrad oder Skateboard nicht mit</dt>
+					<dd id="en" style="display: none;">The crowd is moving really slow so you will end up pushing your bike or carrying your skateboard</dt>
+					<dd id="de">Die Demo bewegt sich sehr langsam, sodass du dein Fahrrad schieben oder dein Skateboard tragen musst</dt>
+					<dt id="en" style="display: none;">&#8226; Take something that makes noise</dt>
+					<dt id="de">&#8226; Nimm etwas, das Lärm macht</dt>
+					<dd id="en" style="display: none;">If you don’t feel like screaming but still want to contribute to the whole idea of making the Demo more visible than take something that makes noise - like a whistle for example. </dd>
+					<dd id="de">Wenn du keine Lust zum Schreien hast, aber dennoch beitragen möchtest die Demo sichtbarer zu machen, nimm etwas das Geräusche macht - wie zum Beispiel eine Pfeife.</dd>
+				</dl>
+				<a name="petitions"></a>
+				<h2 id="en" style="display: none;">Petition the White House on the Issues that Matter to You</h2>
+				<h2 id="de">Bundestag Petitionen</h2>
+				<div class="articleRight">
+					<div class="articleRightInner">
+						<img src="../img/petition.jpg" height="100" width="150">
+					</div>
+				</div>
+				<p id="en" style="display: none;">In the United States the right to petition is guaranteed by the First Amendment to the United States Constitution, which specifically prohibits Congress from abridging "the right of the people...to petition the Government for a redress of grievances". Source: <a href="https://en.wikipedia.org/wiki/Right_to_petition_in_the_United_States">Wikipedia</a></p>
+				<p id="de">Du hast hier zum einen die Möglichkeit, veröffentlichte Petitionen zu verfolgen. Zum anderen kannst du mitdiskutieren und Petitionen, die Sie unterstützen wollen, elektronisch mitzeichnen.</p>
+				<h3>Tricks</h3>
+				<dl>
+					<dt id="en" style="display: none;">&#8226; Visit the White House petitions web page to take action on issues that matter to you: <a href="https://petitions.whitehouse.gov/">https://petitions.whitehouse.gov/</a>.</dt>
+					<dt id="de">&#8226; Besuche mal die Bundestag Petitionen Seite und suche nach "Klima": <a href="https://epetitionen.bundestag.de/">https://epetitionen.bundestag.de/</a>. Oben Rechts ist das Suchfeld.</dt>
+				</dl>
+				<h2 id="en" style="display: none;">Open Petitionen</h2>
+				<h2 id="de">Open Petitions</h2>
+				<p id="en" style="display: none;">Platform for citizen's initiatives, petitions, campaigns. OpenPetition.eu helps you to create your own petition, make it popular and get it signed.</p>
+				<p id="de">Plattform für Bürgerinitiativen, Petitionen, Kampagnen. OpenPetition.de unterstützt Sie dabei, Ihre eigene Petition zu erstellen, sie bekannt zu machen und Unterschriften zu sammeln.</p>
+				<h3>Tricks</h3>
+				<dl>
+					<dt id="en" style="display: none;">&#8226; Visit the Open Petions web site and search for "climate": <a href="https://www.openpetition.eu">https://www.openpetition.eu/</a>. On the top right is the search box.</dt>
+					<dt id="de">&#8226; Besuche mal die Open-Petionen Seite und suche nach "Klima": <a href="https://www.openpetition.de">https://www.openpetition.de/</a>. Oben Rechts ist das Suchfeld.</dt>
+				</dl>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div id="en" style="display: none;">Contact us: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div><div id="de">Kontakt: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div> <!-- was auch immer halt in den footer gehÃ¶rt-->
+	</footer>
+</body>
+</html>

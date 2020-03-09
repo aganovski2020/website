@@ -1,0 +1,153 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.header {
+	position: fixed;
+	top: 0;      
+	background-color:  #D6F3FF;
+	margin: 0;
+	padding: 20px;
+	width: 100%;
+}
+
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.left-list {
+	padding: 0;
+	margin:0;
+	float: left;
+}
+
+.title {
+	font-size: 2em;
+	margin-left: 10px;
+}
+
+
+.pic {
+	height: 100px;
+	width: auto;
+	vertical-align: middle;
+	padding-bottom: 15px;
+}
+
+.right-list {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 36.5px;
+	margin-right: 20px;
+	float: right;
+}
+
+.right-list li {
+	display:inline;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5em;
+	margin-right:20px;
+	border: solid 	transparent 2px; 
+	border-radius: 50%; 
+}
+
+.right-list div:hover {
+	background-color: #F0F8FF; 
+	padding: 5px;
+}
+
+.current {
+	background-color: #F0F8FF;
+	padding:5px;
+}
+
+.flagge {
+	height: 0.9em;
+	width: auto;
+	padding:3px 3px 2px 3px;
+}
+
+.middle {
+	margin: 175px 20px 20px 20px;
+}
+
+.aktuell {
+	border:solid black 5px;
+	border-radius: 50%;
+	padding: 10px;
+	width: 430px;
+	height: 430px;
+	margin:auto;
+	text-align: center;
+	background-color: #e9be53;
+}
+
+.trick-title {
+	font-size: 3em;
+	margin: 0;
+	text-decoration: underline;
+	margin-top: 45px;
+}
+
+.trick {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 25px 10px 20px 10px;
+}
+.trick_small {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 25px 10px 20px 10px;
+}
+
+.aktuell img {
+	border-radius: 20%;
+	height: 180px;
+	width: auto;
+}
+
+.we {
+	margin: 40px 20px 20px 20px;
+	height: 300px;
+}
+
+.do {
+	float:left;
+	width: 50%;
+}
+
+.do-title {
+	font-size:2em;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.text {
+	text-align: center;
+	padding: 5px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+.video {
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+
+.footer {
+	background-color:  #D6F3FF;
+	padding: 10px 20px 10px 20px;
+}
+
+.article ul li ul li dd
+{
+    display: list-item;
+    list-style-type: disc;
+}
