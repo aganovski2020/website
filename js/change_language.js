@@ -57,5 +57,7 @@ function showRandomTipp(counter) {
 		document.getElementById("rd"+counter).style.display = "none";
 	}
 
-    document.getElementById("rd"+randomNumber).style.display = "inline";
+	document.getElementById("rd"+randomNumber).style.display = "inline";
+	
+	setlanguage();
 }
