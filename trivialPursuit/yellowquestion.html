@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yellowquestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" >
+
+
+<h1 style="color: yellow;" class="question"> Gelbe Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointsyellow = a.pointsyellow +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 9); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("yellow"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+ 
+
+
+	// the questions
+	var yellow1 = {question: "Was wird in Spanien veranstaltet?", a: "Stierkämpfe", b: "Ochsenkämpfe", c: "Löwenkämpfe", p: "a" };	
+	localStorage.setItem("yellow1", JSON.stringify(yellow1));
+
+	var yellow2 = {question: "Wie heißen die billigen Unterkünfte in England?", a: "Bed and Breakfast", b: "Sleep and Pub", c: "Rest and Dinner", p: "a" };	
+	localStorage.setItem("yellow2", JSON.stringify(yellow2));
+
+	var yellow3 = {question: "Welche Blumen werden in Holland am meisten gezüchtet?", a: "Rosen", b: "Tulpen", c: "Sonnenblumen", p: "b" };	
+	localStorage.setItem("yellow3", JSON.stringify(yellow3));
+
+	var yellow4 = {question: "Welcher Park liegt mitten in Manhattan?", a: "der Englische Garten", b: "der Hyde Park", c: "der Central Park", p: "c" };	
+	localStorage.setItem("yellow4", JSON.stringify(yellow4));
+
+	var yellow5 = {question: "Auf wie vielen Beinen steht der Pariser Eiffelturm?", a: "zwei ", b: "vier ", c: "acht ", p: "b" };	
+	localStorage.setItem("yellow5", JSON.stringify(yellow5));
+
+	var yellow6 = {question: "Wie heißt das Gebirge in Marokko?", a: "Atlas-Gebirge", b: "Lexikon-Gebirge", c: "Kalender-Gebirge", p: "a" };	
+	localStorage.setItem("yellow6", JSON.stringify(yellow6));
+
+	var yellow7 = {question: "Durch was wurde Kuwait unglaublich Reich?", a: "Diamanten ", b: "Erdöl", c: "Apfelsinen", p: "b" };	
+	localStorage.setItem("yellow7", JSON.stringify(yellow7));
+
+	var yellow8 = {question: "Was ist unsre Nationalhymne?", a: "das Deutschlandlied", b: "der Deutschlandsong", c: "der Deutschlandkanon", p: "a" };	
+	localStorage.setItem("yellow8", JSON.stringify(yellow8));
+
+	var yellow9 = {question: "Was ernten die Winzer?", a: "Weintrauben", b: "Kirschen", c: "Ananas", p: "a" };	
+	localStorage.setItem("yellow9", JSON.stringify(yellow9));
+
+
+
+</script>
+
+</body>
+
+</html>

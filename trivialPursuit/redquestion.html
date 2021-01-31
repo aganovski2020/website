@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>redquestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" > 
+
+
+<h1 style="color: red;" class="question"> Rote Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointspink = a.pointspink +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 9); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("red"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+ 
+
+
+	// the questions
+	var red1 = {question: "Wie tötet die Boaschlange ihre Opfer?", a: "Gift", b: "Ertränken", c: "Erwürgen", p: "c" };	
+	localStorage.setItem("red1", JSON.stringify(red1));
+
+	var red2 = {question: "Wo leben die Walrosse?", a: "Indischen Ozean", b: "Ostsee", c: "Nördlichen Eismeer", p: "c" };	
+	localStorage.setItem("red2", JSON.stringify(red2));
+
+	var red3 = {question: "Zu was wird Wasser bei null Grad Celsius?", a: "Nebel", b: "Eis", c: "Dampf", p: "b" };	
+	localStorage.setItem("red3", JSON.stringify(red3));
+
+	var red4 = {question: "Von was ernährt sich der große Pandabär?", a: "Kakteen", b: "Bambus", c: "Palmen", p: "b" };	
+	localStorage.setItem("red4", JSON.stringify(red4));
+
+	var red5 = {question: "Was ist der häufigste Menschenaffe?", a: "Gorilla", b: "Orang-Utan", c: "Schimpanse", p: "c" };	
+	localStorage.setItem("red5", JSON.stringify(red5));
+
+	var red6 = {question: "Welche Farbe haben die Beeren einer Tollkirsche, die besonders giftig sind?", a: "schwarz", b: "rot", c: "gelb", p: "a" };	
+	localStorage.setItem("red6", JSON.stringify(red6));
+
+	var red7 = {question: "Was tropft aus einer aufgeritzten Baumrinde?", a: "Honig", b: "Harz", c: "Kleister", p: "b" };	
+	localStorage.setItem("red7", JSON.stringify(red7));
+
+	var red8 = {question: "Was ist ein ungeborenes Baby?", a: "Fötus", b: "Feta", c: "Firnis", p: "a" };	
+	localStorage.setItem("red8", JSON.stringify(red8));
+
+	var red9 = {question: "Worauf treiben Eisbären durch das Eismeer?", a: "Flunder", b: "Scholle", c: "Karpfen", p: "b" };	
+	localStorage.setItem("red9", JSON.stringify(red9));
+
+</script>
+
+</body>
+
+</html>

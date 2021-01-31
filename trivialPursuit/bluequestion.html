@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bluequestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" >
+
+
+<h1 style="color: blue;" class="question"> Blaue Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointsblue = a.pointsblue +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 18); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("blue"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+
+
+	// the questions
+	var blue1 = {question: "Wo fand vor langer zeit ein berühmter Turmbau statt?", a: "Babel", b: "Bethlehem", c: "Barcelona", p: "a" };	
+	localStorage.setItem("blue1", JSON.stringify(blue1));
+
+	var blue2 = {question: "Was gab es in Deutschland? Eine...", a: "...Weimarer Republik", b: "...Dresdner Republik", c: "...Hamburger Republik", p: "a" };	
+	localStorage.setItem("blue2", JSON.stringify(blue2));
+
+	var blue3 = {question: "Auf was kletterte Moses? Auf den...", a: "...Berg Sinai", b: "...heiligen Berg", c: "...Ölberg", p: "a" };	
+	localStorage.setItem("blue3", JSON.stringify(blue3));
+
+	var blue4 = {question: "Wo wurde das erste Papiergeld herausgegeben?", a: "Bayern", b: "Sachsen", c: "Hamburg", p: "b" };	
+	localStorage.setItem("blue4", JSON.stringify(blue4));
+
+	var blue5 = {question: "Was ist der Titel eines alten Lehrbuchs?", a: "Münchner Trichter", b: "Nürnberger Trichter", c: "Dortmunder Trichter", p: "b" };	
+	localStorage.setItem("blue5", JSON.stringify(blue5));
+
+	var blue6 = {question: "Wo wurde das Kricketspiel im 14. Jahrhundert erfunden?", a: "England", b: "Indien", c: "Australien", p: "a" };	
+	localStorage.setItem("blue6", JSON.stringify(blue6));
+
+	var blue7 = {question: "Wer hat die erste Windmühle erfunden?", a: "die Perser", b: "die Chinesen", c: "die Inder", p: "a" };	
+	localStorage.setItem("blue7", JSON.stringify(blue7));
+
+	var blue8 = {question: "Wie viele Thesen schlug Martin Luther an die Tür der Schlosskirche von Wittenberg?", a: "57", b: "83", c: "95", p: "c" };	
+	localStorage.setItem("blue8", JSON.stringify(blue8));
+
+	var blue9 = {question: "Woher kam der legendäre Dschingis Khan?", a: "Japan", b: "Thailand", c: "Mongolei", p: "c" };	
+	localStorage.setItem("blue9", JSON.stringify(blue9));
+
+	var blue10 = {question: "Aus was waren die alten Ritterausrüstungen?", a: "Plastik", b: "Eisen", c: "Holz", p: "b" };	
+		localStorage.setItem("blue10", JSON.stringify(blue10));
+
+	var blue11 = {question: "Wo wurde die erste deutsche Briefmarke gedruckt?", a: "Berlin", b: "Bayern", c: "Hessen", p: "b" };	
+		localStorage.setItem("blue11", JSON.stringify(blue11));
+
+	var blue12 = {question: "Mit was malten die Höhlenmenschen ihre Wandbilder?", a: "Farbe", b: "Kreide", c: "Bleistiften", p: "b" };	
+		localStorage.setItem("blue12", JSON.stringify(blue12));
+
+	var blue13 = {question: "Wie entstand die Erde?", a: "Urknall", b: "Urschrei", c: "Urgewalt", p: "a" };	
+		localStorage.setItem("blue13", JSON.stringify(blue13));
+
+	var blue14 = {question: "Wie hießen die Schriftzeichen der alten Ägypter?", a: "Hieroglyphen", b: "Fossilien", c: "Annalen", p: "a" };	
+		localStorage.setItem("blue14", JSON.stringify(blue14));
+
+	var blue15 = {question: "Wer baute in Südamerika riesige Tempel und Paläste?", a: "Sioux", b: "Inkas", c: "Azteken", p: "b" };	
+		localStorage.setItem("blue15", JSON.stringify(blue15));
+
+	var blue16 = {question: "Wo versteckten sich die Cristen im alten Rom?", a: "Kerkern", b: "Katakomben", c: "Gruften", p: "b" };	
+		localStorage.setItem("blue16", JSON.stringify(blue16));
+
+	var blue17 = {question: "Wie heißt die Hauptstadt der Slowakei?", a: "Sofia", b: "Bratislava", c: "Ljubuljan", p: "b" };	
+		localStorage.setItem("blue17", JSON.stringify(blue17));
+
+	var blue18 = {question: "Wie viele Zähne hat ein Erwachsener Mensch normalerweise?", a: "26", b: "30", c: "32", p: "c" };	
+		localStorage.setItem("blue18", JSON.stringify(blue18));
+
+
+
+</script>
+
+</body>
+
+</html>

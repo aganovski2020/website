@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>greenquestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" >
+
+
+<h1 style="color: green;" class="question"> Grüne Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointsgreen = a.pointsgreen +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 15); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("green"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+ 
+
+
+	// the questions
+	var green1 = {question: "Mit was beginnt ein Badmintonspiel?", a: "Aufschlag", b: "Tiefschlag", c: "Nachschlag", p: "a" };	
+	localStorage.setItem("green1", JSON.stringify(green1));
+
+	var green2 = {question: "Wo jobbt Rudi Assauer als Manager?", a: "Dortmund", b: "Schalke", c: "Kaiserlauten", p: "b" };	
+	localStorage.setItem("green2", JSON.stringify(green2));
+
+	var green3 = {question: "Was wird bei den Olympischen Spielen entzünded?", a: "Flamme", b: "Lagerfeuer", c: "Kerze", p: "a" };	
+	localStorage.setItem("green3", JSON.stringify(green3));
+
+	var green4 = {question: "Was ist Heike Drechsler? Eine erfolgreiche...", a: "..Hochspringerin", b: "...Dreispringerin", c: "...Weitspringerin", p: "c" };	
+	localStorage.setItem("green4", JSON.stringify(green4));
+
+	var green5 = {question: "Wie wird der Slalom beim Skilaufen auch genannt?", a: "Torlauf", b: "Crosslauf", c: "Zickzacklauf", p: "a" };	
+	localStorage.setItem("green5", JSON.stringify(green5));
+
+	var green6 = {question: "In was werden Boxhandschuhe gewogen?", a: "Gramm", b: "Pfund", c: "Unzen", p: "c" };	
+	localStorage.setItem("green6", JSON.stringify(green6));
+
+	var green7 = {question: "Wer wurde 2001 neuer Trainer beim Hamburger SV?", a: "Kurt Felix", b: "kurt Jara", c: "Kurt Biedenkopf", p: "b" };	
+	localStorage.setItem("green7", JSON.stringify(green7));
+
+	var green8 = {question: "Worüber wird Fußballtennis gespielt?", a: "Netz", b: "Tor", c: "Mauer", p: "a" };	
+	localStorage.setItem("green8", JSON.stringify(green8));
+
+	var green9 = {question: "Worauf spielen die Tennisprofis beim Wimbledonfinale?", a: "Rasen", b: "Asche", c: "Sand", p: "a" };	
+	localStorage.setItem("green9", JSON.stringify(green9));
+
+	var green10 = {question: "Welches dieser Tiere hält keinen Winterschlaf?", a: "Eichhörnchen", b: "Fledermaus", c: "Siebenschläfer", p: "a" };	
+	localStorage.setItem("green10", JSON.stringify(green10));
+
+var green11 = {question: "Was ist ein Oxymoron?", a: "Ein innerer Widerspruch", b: "Eine Wiederholung", c: "Eine Frageform", p: "a" };	
+	localStorage.setItem("green11", JSON.stringify(green11));
+
+var green12 = {question: "Wofür steht das “L” im Sender RTL", a: "London", b: "Luxemburg", c: "Lichtenstein", p: "b" };	
+	localStorage.setItem("green12", JSON.stringify(green12));
+
+var green13 = {question: "Wie lang ist der Begattungapparat der 15 cm langen Bananenschnecke?", a: "5 cm", b: "15cm", c: "80 cm", p: "c" };	
+	localStorage.setItem("green13", JSON.stringify(green13));
+
+var green14 = {question: "Im Laufe eines 60 Jährigen Lebens hat ein Mann durchschnittlich wie Lange eine Erektion während er schläft?", a: "4 Monate", b: "5 Jahre", c: "8 Jahre", p: "b" };	
+	localStorage.setItem("green14", JSON.stringify(green14));
+
+var green15 = {question: "Wie viele Liter Bier werden in Deutschland pro Kopf jährlich getrunken?", a: "100 Liter", b: "150 Liter", c: "200Lieter", p: "a" };	
+	localStorage.setItem("green15", JSON.stringify(green15));
+
+
+</script>
+
+</body>
+
+</html>

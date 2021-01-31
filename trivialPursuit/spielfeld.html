@@ -1,0 +1,210 @@
+<html> 
+
+<head>
+
+<title> Spielfeld </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="spielfeld.js"></script>
+
+</head>
+
+
+<body onload="onload();" >  
+
+<div class="spielfeld">
+	<div class="inneresspielfeld"></div>
+
+	<div class="spielfeld1"></div>
+	<div class="spielfeld2"></div>
+	<div class="spielfeld3"></div>
+	<div class="spielfeld4"></div>
+	<div class="spielfeld5"></div>
+	<div class="spielfeld6"></div>
+	<div class="spielfeld7"></div>
+	<div class="spielfeld8"></div>
+	<div class="spielfeld9"></div>
+	<div class="spielfeld10"></div>
+	<div class="spielfeld11"></div>
+	<div class="spielfeld12"></div>
+	<div class="spielfeld13"></div>
+	<div class="spielfeld14"></div>
+	<div class="spielfeld15"></div>
+	<div class="spielfeld16"></div>
+	<div class="spielfeld17"></div>
+	<div class="spielfeld18"></div>
+	<div class="spielfeld19"></div>
+	<div class="spielfeld20"></div>
+	<div class="spielfeld21"></div>
+	<div class="spielfeld22"></div>
+	<div class="spielfeld23"></div>
+	<div class="spielfeld24"></div>
+
+
+
+	<div class="field0" id="charackter0"></div>
+	<div class="field0" id="charackter1"><img src="rollerblades.jpeg" class="bild"></div>
+	<div class="field0" id="charackter2"><img src="tom.jpeg" class="bild"></div>
+	<div class="field0" id="charackter3"><img src="typ.jpeg" class="bild"></div>
+	<div class="field0" id="charackter4"><img src="car.jpeg" class="bild"></div>
+	<div class="field0" id="charackter5"><img src="skatergirl.jpg" class="bild"></div>
+	<div class="field0" id="charackter6"><img src="drink.jpeg" class="bild"></div>
+	<div class="field0" id="charackter7"><img src="esel.jpg" class="bild"></div>
+	<div class="field0" id="charackter8"><img src="cars.jpeg" class="bild"></div>
+	<div class="field0" id="charackter9"><img src="snowboard.png" class="bild"></div>
+	<div class="field0" id="charackter10"><img src="musik.jpg" class="bild"></div>
+
+
+</div>
+<div class="anzeige" id="anzeige"> ist an der Reihe </div>
+<div class="würfel"><button class="würfelbutton" onclick="würfeln();"><img src="wurfel.jpg" class="bild"></button></div>
+<button onclick="hilfe()" class="hilfebutton">Hilfe</button>
+
+<div class="currentplayer"><img class="currentplayerpic" id="1" src="rollerblades.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="2" src="tom.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="3" src="typ.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="4" src="car.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="5" src="skatergirl.jpg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="6" src="drink.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="7" src="esel.jpg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="8" src="cars.jpeg"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="9" src="snowboard.png"></div>
+<div class="currentplayer"><img class="currentplayerpic" id="10" src="musik.jpg"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="scoreboard">
+	<div class="scoreboardline" id="header"><div id="upleft">Player</div><div class="scoreboardcolumn" id="column11"></div><div class="scoreboardcolumn" id="column12"></div><div class="scoreboardcolumn" id="column13"></div><div class="scoreboardcolumn" id="column14"></div><div class="scoreboardcolumn" id="column15"></div><div class="scoreboardcolumn" id="column16"></div></div>
+
+
+
+
+	<div class="scoreboardline" id="line1"><div id="columnfirst"><img src="tom.jpeg" id="char1" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player1.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player1.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player1.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player1.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player1.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player1.pointsorange)</script></div></div>
+
+
+
+	<div class="scoreboardline" id="line2"><div id="columnfirst"><img src="tom.jpeg" id="char2" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player2.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player2.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player2.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player2.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player2.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player2.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line3"><div id="columnfirst"><img src="tom.jpeg" id="char3" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player3.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player3.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player3.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player3.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player3.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player3.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line4"><div id="columnfirst"><img src="tom.jpeg" id="char4" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player4.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player4.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player4.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player4.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player4.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player4.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line5"><div id="columnfirst"><img src="tom.jpeg" id="char5" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player5.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player5.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player5.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player5.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player5.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player5.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line6"><div id="columnfirst"><img src="tom.jpeg" id="char6" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player6.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player6.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player6.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player6.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player6.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player6.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line7"><div id="columnfirst"><img src="tom.jpeg" id="char7" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player7.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player7.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player7.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player7.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player7.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player7.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line8"><div id="columnfirst"><img src="tom.jpeg" id="char8" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player8.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player8.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player8.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player8.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player8.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player8.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line9"><div id="columnfirst"><img src="tom.jpeg" id="char9" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player9.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player9.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player9.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player9.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player9.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player9.pointsorange)</script></div></div>
+
+
+	<div class="scoreboardline" id="line10"><div id="columnfirst"><img src="tom.jpeg" id="char10" class="columnpic"></div>
+	<div class="scoreboardcolumn" id="column1"><script type="text/javascript">document.write(player10.pointsblue)</script></div>
+	<div class="scoreboardcolumn" id="column2"><script type="text/javascript">document.write(player10.pointspink)</script></div>
+	<div class="scoreboardcolumn" id="column3"><script type="text/javascript">document.write(player10.pointsyellow)</script></div>
+	<div class="scoreboardcolumn" id="column4"><script type="text/javascript">document.write(player10.pointspurple)</script></div>
+	<div class="scoreboardcolumn" id="column5"><script type="text/javascript">document.write(player10.pointsgreen)</script></div>
+	<div class="scoreboardcolumn" id="column6"><script type="text/javascript">document.write(player10.pointsorange)</script></div></div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+

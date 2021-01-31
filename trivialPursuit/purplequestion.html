@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>purplequestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" >
+
+
+<h1 style="color: purple;" class="question"> Lila Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointspurple = a.pointspurple +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 9); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("purple"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+ 
+
+
+	// the questions
+	var purple1 = {question: "Von was wird Alice ins Wunderland geführt?", a: "Hasen", b: "Kanninchen", c: "Affen", p: "b" };	
+	localStorage.setItem("purple1", JSON.stringify(purple1));
+
+	var purple2 = {question: "Mit was hat es Ali Baba im Märchen zu tun?", a: "40 Räubern", b: "40 Scheichen", c: "40 Soldaten", p: "a" };	
+	localStorage.setItem("purple2", JSON.stringify(purple2));
+
+	var purple3 = {question: "Was ist ein Bikini?", a: "einteiliger Badeanzug", b: "zweiteiliger Badeanzug", c: "dreiteiliger Badeanzug", p: "b" };	
+	localStorage.setItem("purple3", JSON.stringify(purple3));
+
+	var purple4 = {question: "Was ist die kleine Maja?", a: "Hummel", b: "Wespe", c: "Biene", p: "c" };	
+	localStorage.setItem("purple4", JSON.stringify(purple4));
+
+	var purple5 = {question: "Gegen was kämpft Don Quichote?", a: "Windmühlen", b: "Achterbahnen", c: "Zugbrücken", p: "a" };	
+	localStorage.setItem("purple5", JSON.stringify(purple5));
+
+	var purple6 = {question: "Wie heißt der Boss der Rolling Stones?", a: "Mick Hucknall", b: "Mick Jagger", c: "Mick Fleetwood", p: "b" };	
+	localStorage.setItem("purple6", JSON.stringify(purple6));
+
+	var purple7 = {question: "Als was lässt Mickymaus die Besen tanzen?", a: "Hausmeister", b: "Straßenfeger", c: "Zauberlehrling", p: "c" };	
+	localStorage.setItem("purple7", JSON.stringify(purple7));
+
+	var purple8 = {question: "Was ist der Titel einer berühmten Oper von Georges Bizet?", a: "Carmen", b: "Charlotte", c: "Caroline", p: "a" };	
+	localStorage.setItem("purple8", JSON.stringify(purple8));
+
+	var purple9 = {question: "Wer ist ein bekannter Modeschöpfer?", a: "Valention", b: "Valencia", c: "Vanille", p: "a" };	
+	localStorage.setItem("purple9", JSON.stringify(purple9));
+
+</script>
+
+</body>
+
+</html>

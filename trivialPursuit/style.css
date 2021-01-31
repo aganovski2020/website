@@ -1,0 +1,939 @@
+#weitereins{
+	font-size: 35px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-right: 20px;
+	background-color: lightgreen;
+	border-color: black;
+}
+
+#weiterzwei{
+	font-size: 35px;
+	margin-top: 5px;
+	margin-right: 20px;
+	background-color: lightgreen;
+	border-color: black;
+}
+
+.buttons{       /*style2 is the onclick version*/
+	font-size: 25px;
+
+}
+
+.style21{
+	font-size: 25px;
+	border-color: red;
+}
+
+.titeleins{
+	color: lightgreen;
+}
+
+.buttonplayerchoice{ /*style2 is the onclick version*/
+
+	background-color: transparent;
+	border-color: black;
+	border-width: 5px;
+	border-style: solid;
+	margin: 1px;
+
+
+}
+
+.style2{
+
+	background-color: transparent;
+	border-color: red;
+	border-width: 5px;
+	border-style: solid;
+	margin: 1px;
+}
+
+.image{
+
+	height: 300px;
+}
+
+.currentplayerdisplay{
+
+	margin-bottom: 1px;
+}
+
+.character{
+
+	margin-top: 1px;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.nextplayer{
+
+	text-align: center;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* Spielfeld */
+
+.anzeige{
+	position: absolute;
+	top:45%;
+	left: 24.5%;
+	height:10%;
+	width: 22%;
+	/*border-style: solid;
+	border-color: black;
+	border-width: 3px;*/
+	text-align: center;
+	font-size: 50px;
+
+}
+
+.currentplayer{
+	position: absolute;
+	top:43%;
+	right: 75.5%;
+	height:10%;
+
+}
+
+.currentplayerpic{
+	height: 100;
+	visibility: hidden;
+}
+
+.spielfeld{
+	position: absolute;
+	bottom: 10.5%;
+	left:5px;
+	height: 79%;
+	width: 72%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -3;
+
+}
+
+.inneresspielfeld{
+	position: absolute;
+	bottom: 10.5%;
+	left:  8%;
+	height: 78.9%;
+	width: 84%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -2;
+}
+
+
+
+.würfel{
+	position: absolute;
+	top:6.5%;
+	right: 9.5%;
+	height:10%;
+	width: auto;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+
+}
+
+.bild{
+	height: 100%;
+}
+
+.würfelbutton{
+	background-color: transparent;
+	height: 100%;
+	border:none;
+}
+
+.scoreboard{
+	position: absolute;
+	top:24%;
+	left:78%;
+	height: 51.5%;
+	width: 20%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+
+}
+
+.scoreboardline{
+	position: absolute;
+	height:8%;
+	width: 100%;
+	border-top-style: solid;
+	border-top-color: black;
+	border-top-width: 1px;
+}
+
+#header{
+	top: 0;
+	border-top-width: 0;
+}
+#line1{
+	top: 10%;
+}
+#line2{
+	top: 19%;
+}
+#line3{
+	top: 28%;
+}
+#line4{
+	top: 37%;
+}
+#line5{
+	top: 46%;
+}
+#line6{
+	top: 55%;
+}
+#line7{
+	top: 64%;
+}
+#line8{
+	top: 73%;
+}
+#line9{
+	top: 82%;
+}
+#line10{
+	top: 91%;
+}
+
+.scoreboardcolumn{
+	position: absolute;
+	top: 0;
+	height:100%;
+	width: 14%;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+.columnpic{
+	height: 85%;
+}
+
+.columnpic2{
+	visibility: hidden;
+}
+
+#upleft{
+	position: absolute;
+	left:0;
+	top: 0;
+	height:100%;
+	width: 16%;
+	font-size: 20px;
+	text-align: center;
+
+}
+#columnfirst{
+	position: absolute;
+	left:0;
+	top: 0;
+	height:100%;
+	width: 16%;
+
+}
+#column1{
+	left:16%;
+}
+#column2{
+	left: 30%;
+}
+#column3{
+	left: 44%;
+}
+#column4{
+	left: 58%;
+}
+#column5{
+	left: 72%;
+}
+#column6{
+	left: 86%;
+}
+
+#column11{
+	left:19.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:blue;
+}
+#column12{
+	left: 33.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:red;
+}
+#column13{
+	left: 47.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:yellow;
+}
+#column14{
+	left: 61.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:purple;
+}
+#column15{
+	left: 75.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:green;
+}
+#column16{
+	left: 89.5%;
+	top:25%;
+	height: 50%;
+	width: 7%;
+	background-color:orange;
+}
+
+
+.hilfebutton{
+	position: absolute;
+	top: 79.5%;
+	right:9%;
+	font-size: 50px;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+.spielfeld1{
+	position: absolute;
+	bottom: 84.2%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: blue;
+}
+.spielfeld2{
+	position: absolute;
+	bottom: 84.2%;
+	left:  16%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:red ;
+}
+.spielfeld3{
+	position: absolute;
+	bottom: 84.2%;
+	left:  28%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:yellow ;
+}
+.spielfeld4{
+	position: absolute;
+	bottom: 84.2%;
+	left:  40%; 
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: purple;
+}
+.spielfeld5{
+	position: absolute;
+	bottom: 84.2%;
+	left:  52%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: green;
+}
+.spielfeld6{
+	position: absolute;
+	bottom: 84.2%;
+	left:  64%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: orange;
+}
+.spielfeld7{
+	position: absolute;
+	bottom: 84.2%;
+	left:  76%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:blue ;
+}
+.spielfeld8{
+	position: absolute;
+	bottom: 84.2%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: red;
+}
+.spielfeld9{
+	position: absolute;
+	bottom: 68.4%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:yellow ;
+}
+.spielfeld10{
+	position: absolute;
+	bottom: 52.6%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:purple ;
+}
+.spielfeld11{
+	position: absolute;
+	bottom: 36.8%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: green;
+}
+.spielfeld12{
+	position: absolute;
+	bottom: 21.5%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: orange;
+}
+.spielfeld13{
+	position: absolute;
+	bottom: 5.3%;
+	left:  88%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: blue;
+}
+.spielfeld14{
+	position: absolute;
+	bottom: 5.3%;
+	left:  76%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:red ;
+}
+.spielfeld15{
+	position: absolute;
+	bottom: 5.3%;
+	left:  64%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: yellow;
+}
+.spielfeld16{
+	position: absolute;
+	bottom: 5.3%;
+	left:  52%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: purple;
+}
+.spielfeld17{
+	position: absolute;
+	bottom: 5.3%;
+	left:  40%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: green;
+}
+.spielfeld18{
+	position: absolute;
+	bottom: 5.3%;
+	left:  28%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: orange;
+}
+.spielfeld19{
+	position: absolute;
+	bottom: 5.3%;
+	left:  16%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: blue;
+}
+.spielfeld20{
+	position: absolute;
+	bottom: 5.3%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: red;
+}
+.spielfeld21{
+	position: absolute;
+	bottom: 21.1%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: yellow;
+}
+.spielfeld22{
+	position: absolute;
+	bottom: 36.8%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: purple;
+}
+.spielfeld23{
+	position: absolute;
+	bottom: 52.6%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color: green;
+}
+.spielfeld24{
+	position: absolute;
+	bottom: 68.4%;
+	left:  4%;
+	height: 10.5%;
+	width: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	z-index: -1;
+	background-color:orange ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.field0{
+	position: absolute;
+	bottom: 86.2%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+	visibility: hidden;
+}
+.field1{
+	position: absolute;
+	bottom: 86.2%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field2{
+	position: absolute;
+	bottom: 86.2%;
+	left:  17.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+}
+.field3{
+	position: absolute;
+	bottom: 86.2%;
+	left:  29.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field4{
+	position: absolute;
+	bottom: 86.2%;
+	left:  41.5%; 
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field5{
+	position: absolute;
+	bottom: 86.2%;
+	left:  53.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+}
+.field6{
+	position: absolute;
+	bottom: 86.2%;
+	left:  65.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field7{
+	position: absolute;
+	bottom: 86.2%;
+	left:  77.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field8{
+	position: absolute;
+	bottom: 86.2%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field9{
+	position: absolute;
+	bottom: 70.4%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field10{
+	position: absolute;
+	bottom: 54.6%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field11{
+	position: absolute;
+	bottom: 38.8%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field12{
+	position: absolute;
+	bottom: 23.5%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field13{
+	position: absolute;
+	bottom: 7.3%;
+	left:  89.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field14{
+	position: absolute;
+	bottom: 7.3%;
+	left:  77.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field15{
+	position: absolute;
+	bottom: 7.3%;
+	left:  65.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field16{
+	position: absolute;
+	bottom: 7.3%;
+	left:  53.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field17{
+	position: absolute;
+	bottom: 7.3%;
+	left:  41.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field18{
+	position: absolute;
+	bottom: 7.3%;
+	left:  29.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field19{
+	position: absolute;
+	bottom: 7.3%;
+	left:  17.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field20{
+	position: absolute;
+	bottom: 7.3%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+}
+.field21{
+	position: absolute;
+	bottom: 23.1%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field22{
+	position: absolute;
+	bottom: 38.8%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field23{
+	position: absolute;
+	bottom: 54.6%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.field24{
+	position: absolute;
+	bottom: 70.4%;
+	left:  5.5%;
+	height: 8%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	z-index: 0;
+
+}
+.help{
+	visibility: hidden;
+}
+
+
+
+.question{
+	text-align: center;
+	margin-top: 5%;
+}
+
+.frage{
+ text-align: center;
+font-size: 30px;
+
+}
+
+.auswahlmöglichkeit{
+	margin: 2%;
+	font-size: 20px;
+}

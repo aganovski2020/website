@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>orangequestion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body onload="getquestion();" >
+
+
+<h1 style="color: orange;" class="question"> Orange Frage</h1>
+
+<div class="frage" id="question"></div>
+<p style="text-align: center;"><button onclick="checka();" class="auswahlmöglichkeit" id="a"></button></p>
+<p style="text-align: center;"><button onclick="checkb();" class="auswahlmöglichkeit" id="b"></button></p>
+<p style="text-align: center;"><button onclick="checkc();" class="auswahlmöglichkeit" id="c"></button></p>
+
+
+
+
+</html><script type="text/javascript">
+		var b= localStorage.getItem("aktuelleanzahleins");
+		var b = parseInt(b, 10);
+		var c = b-1;
+		var dieanzahl = localStorage.getItem("dieanzahl");
+	function setscorehigher(){
+		
+		if(c<=dieanzahl){
+
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		a.pointsorange = a.pointsorange +1;
+		localStorage.setItem("player"+c, JSON.stringify(a));
+		}
+		else{
+		c = c-dieanzahl;
+		onloado();
+		}
+		alert("Du warst richtig");
+		if(gewonnen()){
+			window.location.href="gewonnen.html";
+		}
+		else{
+		window.location.href="spielfeld.html";
+		}	
+	}
+
+	function wrong(){
+		window.location.href="test.html";
+		
+	}
+
+	function gewonnen(){
+		var a = JSON.parse(localStorage.getItem("player"+c)); 
+		var neededscore = localStorage.getItem("neededscore");
+		if (a.pointsblue>=neededscore) {
+		if (a.pointsgreen>=neededscore) {
+		if (a.pointspink>=neededscore) {
+		if (a.pointsorange>=neededscore) {
+		if (a.pointspurple>=neededscore) {
+		if (a.pointsyellow>=neededscore) {
+			return true
+		}	
+		else{return false}
+		}	
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+		}
+		else{return false}
+
+	}
+
+	var currentquestion ;
+
+
+	function checka(){
+		var question = currentquestion;
+		var right = question.p;
+		if(right=="a"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkb(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="b"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function checkc(){
+		var question = currentquestion;
+		var p = question.p;
+		if(p=="c"){
+			setscorehigher();
+		}
+		else{
+			wrong();
+		}
+	}
+
+	function getquestion(){
+		var random = Math.floor(Math.random() * 9); 
+		random= random+1;
+
+		currentquestion = JSON.parse(localStorage.getItem("orange"+random)); 
+		var question = currentquestion.question;
+		document.getElementById("question").innerHTML = question;
+
+		var a = currentquestion.a;
+		document.getElementById("a").innerHTML = a;
+
+		var b = currentquestion.b;
+		document.getElementById("b").innerHTML = b;
+
+		var c = currentquestion.c;
+		document.getElementById("c").innerHTML = c;
+
+
+	}
+
+
+ 
+
+
+	// the questions
+	var orange1 = {question: "Mit was wird der Bunsenbrenner betrieben?", a: "Benzin", b: "Gas", c: "Holz", p: "b" };	
+	localStorage.setItem("orange1", JSON.stringify(orange1));
+
+	var orange2 = {question: "Mit was werden die Computerdrucker bestückt?", a: "Tintenkugeln", b: "Tintenkannonen", c: "Tintenpatronen", p: "c" };	
+	localStorage.setItem("orange2", JSON.stringify(orange2));
+
+	var orange3 = {question: "Was ist ein bekanntest Computerprogramm?", a: "Excel", b: "Pixxel", c: "Axxel", p: "a" };	
+	localStorage.setItem("orange3", JSON.stringify(orange3));
+
+	var orange4 = {question: "Auf welchen Kurs starten die Formel-1-Piloten in Japan? Auf den Kurs von...", a: "...Aida", b: "...Carmen", c: "...Shogun", p: "a" };	
+	localStorage.setItem("orange4", JSON.stringify(orange4));
+
+	var orange5 = {question: "Was besitzt einn Auto zur Sicherheit?", a: "Airbag", b: "Airport", c: "Airbus", p: "a" };	
+	localStorage.setItem("orange5", JSON.stringify(orange5));
+
+	var orange6 = {question: "Was ist ein Fahrraddynamo?", a: "Prozessor", b: "Generator", c: "Akku", p: "b" };	
+	localStorage.setItem("orange6", JSON.stringify(orange6));
+
+	var orange7 = {question: "Wie ist der Schall im Vergleich zum Licht?", a: "schneller", b: "langsamer", c: "genauso schnell", p: "b" };	
+	localStorage.setItem("orange7", JSON.stringify(orange7));
+
+	var orange8 = {question: "Was dreht sich am längsten?", a: "rohes Ei", b: "gekochtes Ei", c: "Spiegelei", p: "b" };	
+	localStorage.setItem("orange8", JSON.stringify(orange8));
+
+	var orange9 = {question: "Wo wurde das Kabelfernsehen erstmals eingeführt?", a: "England", b: "Deutschland", c: "USA", p: "c" };	
+	localStorage.setItem("orange9", JSON.stringify(orange9));
+
+</script>
+
+</body>
+
+</html>

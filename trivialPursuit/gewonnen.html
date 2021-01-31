@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gewonnen</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body style="margin-top: 10%;" onload="loadwinner();"> 
+
+	<script type="text/javascript" >
+		function loadwinner(){
+	 		var char1 = document.getElementById("char1");
+	 		var aktuelleanzahl = localStorage.getItem("aktuelleanzahleins")
+                  var aktuelleanzahl = aktuelleanzahl-1;
+	 		var player1 = JSON.parse(localStorage.getItem("player"+aktuelleanzahl)); 
+            var a = player1.charackternumber;
+            if(a==0){char1.setAttribute("class", "columnpic2")}
+            if(a==1){char1.src = "rollerblades.jpeg";}
+            if(a==2){char1.src = "tom.jpeg";}
+            if(a==3){char1.src = "typ.jpeg";}
+            if(a==4){char1.src = "car.jpeg";}
+            if(a==5){char1.src = "skatergirl.jpg";}
+            if(a==6){char1.src = "drink.jpeg";}
+            if(a==7){char1.src = "esel.jpg";}
+            if(a==8){char1.src = "cars.jpeg";}
+            if(a==9){char1.src = "snowboard.png";}
+            if(a==10){char1.src = "musik.jpg";}
+}
+	</script>
+
+<div style="height: 20%; text-align: center;"><img style="border: solid black 1px;" src="tom.jpeg" id="char1"></div>
+<h1><div style="font-size: 30px; text-align: center;">Hat gewonnen</div></h1>
+<div style="text-align: center"><button style=" font-size: 10px;"><a href="index.html">Zum Anfang</a></button></div>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<html> 
+
+<head>
+
+<title> Spielerauswahl </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="spielerauswahl.js"></script>
+
+
+
+</head>
+
+
+
+<body onload="start();" style="margin-top: 20px">  
+
+
+<h1 style="text-align: center;" class="currentplayerdisplay"><div id="currentplayerdisplay"></div></h1>
+
+<div class="character" align="center">
+<button id="char1" class="buttonplayerchoice" onclick="creatplayer(1, one);"><img src="rollerblades.jpeg" class="image"></button>
+<button id="char2" class="buttonplayerchoice" onclick="creatplayer(2, two);"><img src="tom.jpeg" class="image"></button>
+<button id="char3" class="buttonplayerchoice" onclick="creatplayer(3, three);"><img src="typ.jpeg" class="image"></button>
+<button id="char4" class="buttonplayerchoice" onclick="creatplayer(4, four);"><img src="car.jpeg" class="image"></button>
+<button id="char5" class="buttonplayerchoice" onclick="creatplayer(5, five);"><img src="skatergirl.jpg" class="image"></button>
+</div>
+<div class="character" align="center">
+<button id="char6" class="buttonplayerchoice" onclick="creatplayer(6, six);"><img src="drink.jpeg" class="image"></button>
+<button id="char7" class="buttonplayerchoice" onclick="creatplayer(7, seven);"><img src="esel.jpg" class="image"></button>
+<button id="char8" class="buttonplayerchoice" onclick="creatplayer(8, eight);"><img src="cars.jpeg" class="image"></button>
+<button id="char9" class="buttonplayerchoice" onclick="creatplayer(9, nine);"><img src="snowboard.png" class="image"></button>
+<button id="char10" class="buttonplayerchoice" onclick="creatplayer(10, ten);"><img src="musik.jpg" class="image"></button>
+</div>
+
+
+<input type="hidden" id="1" value="<p>Spieler 1 wähle dein Charackter</p>" />
+<input type="hidden" id="2" value="<p>Spieler 2 wähle dein Charackter</p>" />
+<input type="hidden" id="3" value="<p>Spieler 3 wähle dein Charackter</p>" />
+<input type="hidden" id="4" value="<p>Spieler 4 wähle dein Charackter</p>" />
+<input type="hidden" id="5" value="<p>Spieler 5 wähle dein Charackter</p>" />
+<input type="hidden" id="6" value="<p>Spieler 6 wähle dein Charackter</p>" />
+<input type="hidden" id="7" value="<p>Spieler 7 wähle dein Charackter</p>" />
+<input type="hidden" id="8" value="<p>Spieler 8 wähle dein Charackter</p>" />
+<input type="hidden" id="9" value="<p>Spieler 9 wähle dein Charackter</p>" />
+<input type="hidden" id="10" value="<p>Spieler 10 wähle dein Charackter</p>" />
+
+<p align="center"><button onclick="displaycurrentplayer();" class="nextplayer">Nächster Spieler</button></p>
+
+<p align="right" style="margin-right: 5%"><a href="index.html"><button id="weiterzwei" >Zurück</button></a><button id="weiterzwei" onclick="weiter();">Weiter</button></p>
+
+</body>
+
+</html>
