@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Greentricks</title>
+	<meta name="description" content="This is greentricks "> <!-- work on it -->
+	<link rel="stylesheet" type="text/css" href="css/greentricks.css">
+	<link rel="stylesheet" href="css/wikistyle.css">
+	<script type="text/javascript" src="js/change_language.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/script.js"></script>	
+</head>
+<body onload="showRandomTipp(5)">
+	<header class="header">
+		<nav class="nav">
+			<div class="left-list">
+				<img class="pic" src="img/logo.png">
+				<span class="title">Greentricks</span>
+			</div>
+			<ul class="right-list">  <!-- now the list elements are divs but later they should be a (the also chnage style)-->
+				<li><div class="current">Home</div></li>
+				<li><div id="en" style="display: none;"><a href="tricks.html?lang=en">Tricks</a></div><div id="de"><a href="tricks.html?lang=de">Tricks</a></div></li>
+				<li><div id="en" style="display: none;"><a href="about.html?lang=en">About us</a></div><div id="de"><a href="about.html?lang=de">&Uuml;ber uns</a></div></li>
+				<li><div id="en" style="display: none;"><a href="werbung.html?lang=en">Advertisement</a></div><div id="de"><a href="werbung.html?lang=de">Werbung</a></div></li>
+				<li><div><img onclick="showEn()" class="flagge" src="img/englisch.png"></div></li>
+				<li><div><img onclick="showGer()" class="flagge" src="img/deutsch.png"></div></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="middle">
+		<div class="article">
+			<section id="rd1" style="display: none;">
+				<div class="aktuell">
+					<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+					<p class="trick" id="en" style="display: none;">Ever tried a veggie burger?</p><p id="de" class="trick">Einen Gemüseburger schon probiert?</p>
+					<img src="img/burger.jfif">
+				</div>
+			</section>
+			<section id="rd2" style="display: none;">
+				<div class="aktuell">
+					<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+					<p class="trick" id="en" style="display: none;"><a href="tricks/house.html?lang=en">Did you turn off the lights before leaving the house?</a></p><p id="de" class="trick"><a href="tricks/house.html?lang=de">Hast du das Licht ausgeschaltet, bevor du das Haus verlassen hast?</a></p>
+					<img src="img/lights_off.jpg">
+				</div>
+			</section>
+			<section id="rd3" style="display: none;">
+				<div class="aktuell">
+					<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+					<p class="trick" id="en" style="display: none;"><a href="tricks/house.html?lang=en">Did you plug out all electronic devices you are currently not using?</a></p><p id="de" class="trick_small"><a href="tricks/house.html?lang=de">Hast du alle elektronischen Geräte ausgesteckt, die du derzeit nicht verwendest?</a></p>
+					<img src="img/plug.png">
+				</div>
+			</section>
+			<section id="rd4" style="display: none;">
+				<div class="aktuell">
+					<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+					<p class="trick" id="en" style="display: none;"><a href="tricks/house.html?lang=en">Replace all of your electrical light bulbs with energy saving ones</a></p><p id="de" class="trick"><a href="tricks/house.html?lang=de">Ersetzen Sie alle Ihre alte Glühbirnen durch energiesparenden</a></p>
+					<img src="img/green-bulb.png">
+				</div>
+			</section>
+			<section id="rd5" style="display: none;">
+				<div class="aktuell">
+					<p class="trick-title" id="en" style="display: none;">Trick of the day</p><p id="de" class="trick-title">Trick des Tages</p>
+					<p class="trick_small" id="en" style="display: none;"><a href="tricks/house/greenhome.html?lang=en">Do you have a barcode scanner installed on your smart phone?</a></p><p id="de" class="trick_small"><a href="tricks/house/greenhome.html?lang=de">Hast du bereits ein Bar-code-scanner App auf deinem Smartphone installiert?</a></p>
+					<img src="img/barcode.jpg">
+				</div>
+			</section>
+
+
+			<section class="we">
+				<div class="do">
+					<p class="do-title" id="en" style="display: none;">What we do</p><p id="de" class="do-title">Was machen wir</p>
+					<p class="text" id="en" style="display: none;"> Ever heard of gloabal warminng? We did, and after a ton of reasearch we decided to make a website that proviedes standard citizence like us with easy everyday tricks, to help stop global warming. For more information check out the promotion viedeo to the right or directly check out some of our <a href="tricks.html?lang=en">Tricks</a>. </p>
+					<p class="text" id="de"> Schon mal was von globales erwärmen gehört? Wir haben, und nach einer menge Nachforschungen haben wir beschlossen, eine Website zu erstellen, die wie wir mit einfachen Tricks des Alltags uns alle hilft die globale Erwärmung zu stoppen. Weitere Informationen findest du rechts in der Video oder schaue unserer <a href="tricks.html?lang=de">Tricks</a> an. </p>
+				</div>
+				<div class="video"><iframe width="500" height="300" src="https://www.youtube.com/embed/skI18YVF010" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><!-- nebeneinander und das video muss nch da hin-->
+			</section>
+		</div>
+	</section>
+	<footer class="footer">
+		<div id="en" style="display: none;">Contact us: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div><div id="de">Kontakt: <a href="mailto:greentricks123@gmail.com">greentricks123@gmail.com</a></div> <!-- was auch immer halt in den footer gehört-->
+	</footer>
+
+</body>
+</html>
