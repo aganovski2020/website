@@ -1,0 +1,181 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.header {
+	position: fixed;
+	top: 0;      
+	/*background-color:  #D6F3FF;*/
+	background-image: linear-gradient( to right, Aquamarine, Turquoise );
+	margin: 0;
+	padding: 20px;
+	width: 100%;
+}
+
+.left-list {
+	padding: 0;
+	margin-top: 36.5px;
+	margin-right: 20px;
+	float: left;
+}
+
+.title {
+	font-size: 2em;
+	margin-left: 10px;
+}
+
+
+
+.right-list {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 36.5px;
+	margin-right: 20px;
+	float: right;
+}
+
+.right-list li {
+	display:inline;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5em;
+	margin-right:20px;
+	border: solid 	transparent 2px; 
+	border-radius: 50%; 
+}
+
+.right-list div:hover {
+	background-color: #F0F8FF; 
+	padding: 5px;
+}
+
+.current {
+	background-color: #F0F8FF;
+	padding:5px;
+}
+
+
+
+
+
+
+
+
+.section {
+	margin: 160px 20px 20px 20px;
+	border: Turquoise solid 1px;
+}
+
+
+.section1 {
+	margin: 40px 20px 20px 20px;
+	height: 300px;
+}
+
+.section1left {
+	float:left;
+	width: 50%;
+}
+
+.s1ltitle {
+	font-size:2em;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.s1ltext {
+	text-align: center;
+	padding: 5px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+.secction1right {
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+
+
+
+
+.section2 {
+	margin: 60px 20px 20px 20px;
+	height: 300px;
+}
+
+.s2div {
+	width: 50%;
+	margin-left: 25%;
+}
+
+.s2title {
+	font-size:2em;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.s2text {
+	text-align: center;
+	padding: 5px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+
+.section3 {
+	margin: 60px 20px 20px 20px;
+	height: 300px;
+}
+
+.section3left {
+	float:left;
+	width: 50%;
+}
+
+.s3ltitle {
+	font-size:2em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.s3ltext {
+	text-align: center;
+	padding: 5px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+
+.secction3right {
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+
+.s3rtitle {
+	font-size:2em;
+	text-align: center;
+
+}
+
+.s3rtext {
+	text-align: center;
+	padding: 5px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+
+
+
+.footer {
+/*background-color:  #D6F3FF;*/
+background-image: linear-gradient( to right, Aquamarine, Turquoise );
+padding: 10px 20px 10px 20px;
+}
+
+.footertext{
+
+}
