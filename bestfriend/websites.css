@@ -1,0 +1,18 @@
+/* 100% diagonal gradient yellow, orange, red*/
+.dgyor{
+ 	background-image: linear-gradient(to bottom right, yellow, orange, red);
+ 	height: 100%;
+ 	margin:0;
+
+}
+
+.dmp{
+	position: absolute;
+	left: 25%;
+	width: 50%;
+	margin: 0;
+ 	top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
