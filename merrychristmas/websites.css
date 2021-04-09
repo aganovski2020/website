@@ -1,0 +1,47 @@
+/* full size background*/
+.fusibackg{
+ 	height: 100%;
+ 	margin:0;
+ 	width: 20%;
+
+}
+
+/*one middle div*/
+.onemdiv{
+	position: absolute;
+	left: 25%;
+	width: 50%;
+	margin: 0;
+ 	top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+/* full size picture*/
+.fusipic{
+	background-size: 100%;
+ 	margin:0;
+}
+
+
+/*top right div*/
+
+.trd{
+	position: absolute;
+	right: 5%;
+	width: 30%;
+	margin: 0;
+ 	top: 10%;
+}
+
+/*middle right div*/
+
+.mrdiv{
+	position: absolute;
+	right: 5%;
+	width: 30%;
+	margin: 0;
+ 	top: 50%;
+}
