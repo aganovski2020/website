@@ -16,29 +16,38 @@
 <br>
 
 <div style="text-align: center;">
-Jetzt habt ihr sicher hunger <br>
-Geht zum norma und kauft euch einen snack <br>
-Passt aber auf ihr habt nur … euro <br>
-Vllt eine breze pro person? <br>
-Wenn ihr so weit seid drückt auf weiter <br>
+Jetzt müsst ihr Richtung Norma weiter laufen <br>
+Was für einen Laden finden ihr kurz vorher <br>
+Hier werden wertvolle alte Dinge verkauft <br>
 
 
  </div>
 <br>
 <br>
 
-    <button onclick="displayAlert()">Weiter</button>
+    <input type="text" id="nr" placeholder="Antwort"> Laden <br>
+    <button onclick="displayAlert()">Check</button> <br>
+    Bitte benutzt kleine Buchstaben und schreibt &#228 als ae, &#246 als oe und &#252 als ue
 
 <script>
 
     function displayAlert() {
+        
+        answer = document.getElementById('nr').value
 
-            document.location='clue6.html'
-       
+        if(answer=="antiquitaeten"||answer=="helpp"){
+            alert("Richtig. Weiter gehts!")
+            document.location='clue2.html'
+        }
+        else{
+            alert("Leider liegst ihr falsch. Probiere es nochmal")
+        }
 
     }
 
- 
+    function displayHelp(){
+        alert("Schaut auf das rote Schild, es fängt mit Anti... an")
+    }
 
 </script>
 <br>
