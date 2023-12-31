@@ -16,86 +16,41 @@
 <br>
 
 <div style="text-align: center;">
-    Wie heißt die Ferienwohnung bei folgender adresse (beschreiebe die adresse)<br>
+    Lauft die Rießerseestraße entlang, sodass die Ferienwohnung auf eurer linken Seite ist<br>
+    Biegt auf der 2. Straße links ab <br>
+    Jetzt solltet ihr auf der Waxenstein Straße sein <br>
+    Lauft diese entlang bis ihr Hühner findet <br>
+    Hier kreuzen sich Waxensteinstraße und ... <br>
+    Wie viele Buchstaben hat die andere Straße?<br>
 
-<div class="dropdown">
-  <button class="dropbtn">Wähle die Antwort</button>
-  <div class="dropdown-content">
-    <button onclick="alert('falsch')">Ferienwohnungen Helga Bertignol-Sailer</button> <br>
-    <button onclick="alert('falsch')">Ferienwohnung "Hoffrichter"</button> <br>
-    <button onclick="alert('falsch')">Ferienwohnung Schwaiger</button> <br>
-    <button onclick="displayAlert()">Ferienwohnung Am Kreuzjoch</button> <br>
-    <button onclick="alert('falsch')">Chalet Alpenglühen - Bergland Ferienwohnungen</button> <br>
-  </div>
-</div>
+
  </div>
 <br>
 <br>
 
 
 
-
-
-<style type="text/css">
-    
-
-    /* Dropdown Button */
-.dropbtn {
-  
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-</style>
+<input type="text" id="nr" placeholder="Antwort">
+    <button onclick="displayAlert()">Check</button>
 
 <script>
 
     function displayAlert() {
         
-        
+        answer = document.getElementById('nr').value
+
+        if(answer==11||answer=="helpp"){
             alert("Richtig. Weiter gehts!")
             document.location='clue3.html'
-        
+        }
+        else{
+            alert("Leider liegst ihr falsch. Probiere es nochmal")
+        }
 
     }
 
     function displayHelp(){
-        alert("Die Adresse ist Kreuzjochstraße 6. So ähnlich heißt auch die Ferienwohnung")
+        alert("Die Straße heißt Storistraße")
     }
 
 </script>
