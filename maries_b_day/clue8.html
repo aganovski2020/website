@@ -28,7 +28,8 @@ Tipp: wenn ihr an der Schule vorbei lauft seid ihr zu weit <br>
 <br>
 Wie heißt die 4. Straße an der ihr vorbei lauft? <br>
     <input type="text" id="nr" placeholder="Antwort">
-    <button onclick="displayAlert()">Check</button>
+    <button onclick="displayAlert()">Check</button> <br>
+    Bitte benutzt kleine Buchstaben und schreibt &#228 als ae, &#246 als oe und &#252 als ue
 
 <script>
 
@@ -36,7 +37,7 @@ Wie heißt die 4. Straße an der ihr vorbei lauft? <br>
         
         answer = document.getElementById('nr').value
 
-        if(answer=="almhüttenweg"||answer=="helpp"){
+        if(answer=="almhuettenweg"||answer=="helpp"){
             alert("Richtig. Weiter gehts!")
             document.location='clue9.html'
         }
