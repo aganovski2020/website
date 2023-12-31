@@ -1,0 +1,66 @@
+<html> 
+
+<head>
+
+<title> Maries Schatzsuche </title>
+
+<!--<link rel="stylesheet" href="log.css" />-->
+</head>
+
+<body > 
+
+<header style="text-align: center;">Station 3</header>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center;">
+Folgt der Straße weiter (Waxensteinstraße) <br>
+Auf welche Straße stößt im am Ende?
+ </div>
+<br>
+<br>
+
+    <input type="text" id="nr" placeholder="Antwort"> Straße <br>
+    <br>
+    <button onclick="displayAlert()">Check</button> <br>
+    Bitte benutzt kleine Buchstaben
+
+<script>
+
+    function displayAlert() {
+        
+        answer = document.getElementById('nr').value
+
+        if(answer=="rießersee"||answer=="helpp"){
+            alert("Richtig. Weiter gehts!")
+            document.location='clue4.html'
+        }
+        else{
+            alert("Leider liegst ihr falsch. Probiere es nochmal")
+        }
+
+    }
+
+    function displayHelp(){
+        alert("Die Straße beginnt mit rie... und endet mit ...see")
+    }
+
+</script>
+<br>
+<br>
+
+<button onclick="displayHelp()">Hilfe</button>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

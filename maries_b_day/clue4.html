@@ -1,0 +1,65 @@
+<html> 
+
+<head>
+
+<title> Maries Schatzsuche </title>
+
+<!--<link rel="stylesheet" href="log.css" />-->
+</head>
+
+<body > 
+
+<header style="text-align: center;">Station 4</header>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center;">
+Schön das ihr die Rießersee straße gefunden habt lauft die jetzt entlang bis ihr zum iaLtaBa kommt <br>
+<br>
+Anscheinend sind die Buchstaben ein wenig durcheinander <br>
+Bringe sie in die Richtige Reihnfolge <br>
+
+ </div>
+<br>
+<br>
+
+Wohin sollt ihr laufen? <input type="text" id="nr" placeholder="Antwort">  <br>
+    <br>
+    <button onclick="displayAlert()">Check</button> <br>
+    Kleiner Tipp: Es sind 2 Wört mit einem Leerzeichen dazwischen
+
+<script>
+
+    function displayAlert() {
+        
+        answer = document.getElementById('nr').value
+
+        if(answer=="La Baita"||answer=="helpp"){
+            alert("Richtig. Weiter gehts!")
+            document.location='clue4b.html'
+        }
+        else{
+            alert("Leider liegst ihr falsch. Probiere es nochmal")
+        }
+
+    }
+
+</script>
+<br>
+<br>
+
+<button onclick="displayHelp()">Hilfe</button>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

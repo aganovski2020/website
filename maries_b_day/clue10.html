@@ -1,0 +1,119 @@
+<html> 
+
+<head>
+
+<title> Maries Schatzsuche </title>
+
+<!--<link rel="stylesheet" href="log.css" />-->
+</head>
+
+<body > 
+
+<header style="text-align: center;">Station 10</header>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center;">
+Jetzt stellt sich die frage, über die Brücke: ja oder nein? <br>
+Dafür müsst ihr die folgende Frage beantworten, legt alle eure köpfe zusammen und versucht mal zu zählen wie viele länder es in europa gibt <br>
+
+<div class="dropdown">
+  <button class="dropbtn">Wähle die Antwort</button>
+  <div class="dropdown-content">
+    <button onclick="alert('falsch')">1-10</button> <br>
+    <button onclick="alert('falsch')">10-20</button> <br>
+    <button onclick="alert('falsch')">20-30</button> <br>
+    <button onclick="alert('falsch')">30-40</button> <br>
+    <button onclick="displayAlert()">40-50</button> <br>
+    <button onclick="alert('falsch')">über 50</button> <br>
+  </div>
+</div>
+ </div>
+<br>
+<br>
+
+
+</div>
+
+<br>
+<br>
+
+<style type="text/css">
+    
+
+    /* Dropdown Button */
+.dropbtn {
+  
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+</style>
+
+<script>
+
+    function displayAlert() {
+        
+            alert("Richtig. Es sind 47. Weiter gehts!")
+            document.location='clue11.html'
+
+    }
+
+    function displayHelp(){
+        alert("Es sind 47 Länder")
+    }
+
+</script>
+<br>
+<br>
+
+<button onclick="displayHelp()">Hilfe</button>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html> 
+
+<head>
+
+<title> Maries Schatzsuche </title>
+
+<!--<link rel="stylesheet" href="log.css" />-->
+</head>
+
+<body > 
+
+<header style="text-align: center;">Station 7</header>
+
+<br>
+<br>
+
+<div style="text-align: center;">
+Jetzt flotti karottie über die brücke und auf der anderen seite <br>
+Hier ihr eine Kreuzung und zwar Maximilianstraße und Loisachstraße <br>
+Wer schaut den außer euch auf diese Kreuzung? <br>
+<br>
+<br>
+Kleiner Tipp: <br>
+Entfernt die letzten 3 Buchstaben von Kreuzung weil nach dem ding müsst ihr schauen und dann müsst ihr nur noch wissen wer daran hängt 
+
+
+ </div>
+<br>
+<br>
+    Wer schaut auf die Kreuzung? <br>
+    <input type="text" id="nr" placeholder="Antwort"> Automat <br>
+    <button onclick="displayAlert()">Check</button> <br>
+    Bitte benutzt kleine Buchstaben
+
+
+<script>
+
+    function displayAlert() {
+        
+        answer = document.getElementById('nr').value
+
+        if(answer=="jesus"||answer=="helpp"){
+            alert("Richtig. Weiter gehts!")
+            document.location='clue8.html'
+        }
+        else{
+            alert("Leider liegst ihr falsch. Probiere es nochmal")
+        }
+
+    }
+
+    function displayHelp(){
+        alert("Wer hängt am Kreuz? (Ist an Weichnachten geboren)")
+    }
+
+</script>
+<br>
+<br>
+
+<button onclick="displayHelp()">Hilfe</button>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
